@@ -1,0 +1,62 @@
+:root {
+    --primary: #1e90ff;
+    --secondary: #EACEB9;
+}
+
+body {
+    background-color: #EACEB9 !important;
+}
+
+.input-bg {
+    color: white;
+    background-color: transparent;
+}
+
+.input-bg:focus {
+    color: white;
+    background-color: transparent;
+}
+
+.input-bg ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--secondary);
+    opacity: 1;
+    /* Firefox */
+}
+
+.input-bg::-webkit-input-placeholder {
+    color: var(--secondary);
+}
+
+.input-bg::-moz-placeholder {
+    color: var(--secondary);
+}
+
+.input-bg:-ms-input-placeholder {
+    color: var(--secondary);
+}
+
+.input-bg:placeholder {
+    color: var(--secondary);
+}
+
+.login,
+.registration {
+    color: white;
+    background-color: #524336 !important;
+}
+
+.login-link,
+.registration-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+.login-link:hover,
+.registration-link:hover {
+    text-decoration: none;
+    color: #EACEB9;
+    font-weight: bold;
+}
