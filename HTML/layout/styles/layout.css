@@ -208,6 +208,7 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 #mainav ul{display:inline-block;text-transform:uppercase;}
 #mainav ul ul{z-index:9999; position:absolute; width:80px; text-transform:none; text-align:center;}
 #mainav ul ul ul{left:180px; top:0;}
+#mainav li{font-size:1.2rem; font-weight: 550; font-family:"Bahnschrift SemiBold";}
 #mainav li{display:block; float:left; position:relative; margin:10; padding:0;}
 #mainav li:last-child{margin-right:0;}
 #mainav li li{width:100%; margin:0;}
@@ -220,9 +221,8 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 #mainav li li .drop::after{top:15px; left:5px;}
 #mainav ul ul{visibility:hidden; opacity:0;}
 #mainav ul li:hover > ul{visibility:visible; opacity:1;}
-#mainav ul{font-weight:900px;}
-#mainav ul ul{font-weight:900px;} 
-
+#mainav li{display:inline;}
+#mainav a{display:inline-block; padding:10px;}
 #mainav form{display:none; margin:0; padding:0;}
 #mainav form select, #mainav form select option{display:block; cursor:pointer; outline:none;}
 #mainav form select{width:100%; padding:5px; border:none;}
@@ -279,12 +279,13 @@ td{border-width:0 1px;}
 
 /* Font Awesome Social Icons
 --------------------------------------------------------------------------------------------------------------- */
+
 .faico{margin:0; padding:0; list-style:none;}
 .faico li{display:inline-block; margin:8px 5px 0 0; padding:0; line-height:normal;}
 .faico li:last-child{margin-right:0;}
 .faico a{display:inline-block; width:36px; height:36px; line-height:36px; font-size:18px; text-align:center;}
 
-.faico a{color:#FFFFFF; background-color:#0E74A5;}
+.faico a{color:#FFFFFF; background-color:#9f603c;}
 .faico a:hover{}
 
 .faicon-dribble:hover{background-color:#EA4C89;}
@@ -306,10 +307,11 @@ td{border-width:0 1px;}
 --------------------------------------------------------------------------------------------------------------- */
 body{color:#FFFFFF; background-color:#FFFFFF;}
 a{color:#9f603c;}
+.nospace
 a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
 hr, .borderedbox{border-color:#D7D7D7;}
 label span{color:#FF0000; background-color:inherit;}
-input:focus, textarea:focus, *:required:focus{border-color:#56AED4;}
+input:focus, textarea:focus, *:required:focus{border-color:#9f603c;}
 
 .overlay{color:#FFFFFF; background-color:inherit;}
 .overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
@@ -331,8 +333,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#56AED4;}
 .row4{color:#FFFFFF; background-color:#FFFFFF;}
 .row5, .row5 a{color:#FFFFFF; background-color:#FFFFFF;}
 .row5{border-color:rgba(0,0,0,.1);}
-
-.gradient{color:#FFFFFF; background:linear-gradient(to bottom right, #0E74A5, #4FB5F5);}
+.gradient{color:#FFFFFF; background:linear-gradient(to bottom right, #2d1a10, #9f603c);}
 
 
 /* Top Bar */
@@ -379,7 +380,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#56AED4;}
 #footer hr, #footer .borderedbox, #footer .linklist li{border-color:rgba(0,0,0,.1);}
 
 #footer input, #footer button{border-color:transparent;}
-#footer input{color:#FFFFFF; background-color:#0E74A5;}
+#footer input{color:#FFFFFF; background-color:#FFFFFF;}
 #footer input:focus{border-color:#9f603c;}
 #footer button{color:#FFFFFF; background-color:#9f603c;}
 
@@ -389,7 +390,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#56AED4;}
 #mainav li a{color:inherit;}
 #mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#FFFFFF; background-color:inherit;}
 #mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(247,168,4,.5);/* #F7A804 */ border-color:rgba(0,0,0,.6);}
-#mainav li li:hover > a, #mainav .active .active > a{color:#0E74A5; background-color:#9f603c;}
+#mainav li li:hover > a, #mainav .active .active > a{color:#9f603c; background-color:#9f603c;}
 #mainav form select{color:#474747; background-color:#FFFFFF;}
 
 #breadcrumb a{color:inherit; background-color:inherit;}
