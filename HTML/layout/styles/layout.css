@@ -14,7 +14,7 @@ File: Layout CSS
 
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
-.row0, .row0 a{}
+.row0, .row0 a{font-size:13px; font-weight:lighter;}
 .row1, .row1 a{}
 .row2, .row2 a{}
 .row3, .row3 a{}
@@ -53,7 +53,9 @@ File: Layout CSS
 #pageintro{padding:180px 0;}
 
 #pageintro article{display:block; max-width:75%;}
-#pageintro .heading{margin-bottom:20px; font-size:4rem;}
+#pageintro .heading{margin-bottom:20px; font-size:4rem; font-weight:bold}
+#pageintro span {font-size:2.5rem; font-weight:lighter}
+#pageintro p {font-size:1.4rem;}
 #pageintro p:first-of-type{margin:0 0 20px 0; text-transform:uppercase; font-size:1.6rem; letter-spacing:5px;}
 #pageintro footer{margin-top:50px;}
 
@@ -338,7 +340,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#9f603c;}
 
 /* Top Bar */
 #topbar ul li{border-color:rgba(255,255,255,.4);}
-#topbar div:first-of-type li:first-child a{color:#9f603c;}
+#topbar div:first-of-type li:first-child a{color:#FFFFFF;}
 
 
 /* Header */
