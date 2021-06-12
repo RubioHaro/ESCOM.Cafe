@@ -12,6 +12,7 @@ File: Layout CSS
 @import url("fontawesome-free/css/fontawesome-all.min.css");
 @import url("framework.css");
 
+html {scroll-behavior: smooth; } 
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
 .row0, .row0 a{font-size:13px; font-weight:lighter;}
@@ -180,7 +181,6 @@ File: Layout CSS
 #footer .grande{width:360px;height:100px;}
 #footer button{padding:8px 18px 10px; text-transform:uppercase; font-weight:700; cursor:pointer;}
 #footer iframe{width:400px;height:300px;}
-#footer h
 
 
 /* Copyright
@@ -389,7 +389,8 @@ input:focus, textarea:focus, *:required:focus{border-color:#9f603c;}
 #footer hr, #footer .borderedbox, #footer .linklist li{border-color:rgba(0,0,0,.1);}
 #footer .linklist li a{color:#FFFFFF;} 
 #footer input, #footer button{border-color:transparent;}
-#footer input{color:#FFFFFF; background-color:#FFFFFF;}
+#footer input{color:#000000; background-color:#FFFFFF;}
+#footer textarea{color:#000000;}
 #footer input:focus{border-color:#9f603c;}
 #footer button{color:#FFFFFF; background-color:#9f603c;}
 
@@ -397,7 +398,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#9f603c;}
 /* Navigation */
 #mainav{color:#FFFFFF; background-color:#9f603c;}
 #mainav li a{color:inherit;}
-#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#FFFFFF; background-color:inherit;}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#2d1a10; background-color:inherit;}
 #mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(247,168,4,.5);/* #F7A804 */ border-color:rgba(0,0,0,.6);}
 #mainav li li:hover > a, #mainav .active .active > a{color:#9f603c; background-color:#9f603c;}
 #mainav form select{color:#474747; background-color:#FFFFFF;}
