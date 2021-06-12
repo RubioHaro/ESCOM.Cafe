@@ -21,12 +21,15 @@ File: Layout CSS
 .row4, .row4 a{}
 .row5{border-top:1px solid;}
 
+/* Logo
+--------------------------------------------------------------------------------------------------------------- */
+#logo img {position:absoulte; left:110px; top:200px;}
 
 /* Top Bar
 --------------------------------------------------------------------------------------------------------------- */
-#topbar{padding:15px 0; font-size:.8rem; text-transform:uppercase;}
+#topbar{padding:15px 0;font-size:.8rem; text-transform:uppercase;}
 
-#topbar ul li{display:inline-block; margin-rigt:10px; padding-right:15px; border-right:1px solid;}
+#topbar ul li{display:inline-block; margin-right:10px; padding-right:15px; border-right:1px solid;}
 #topbar ul li:last-child{margin-right:0; padding-right:0; border-right:none;}
 #topbar i{line-height:normal;}
 
@@ -150,7 +153,7 @@ File: Layout CSS
 #cta .sectiontitle{margin-bottom:50px;}
 
 #cta ul{}
-#cta ul li{}
+#cta ul li{font-size:18px;}
 #cta ul li:last-child{margin-bottom:0;}/* Used when elements stack in small viewports */
 #cta ul li div{position:relative; min-height:60px; padding:20px; padding-left:100px;}
 #cta ul li div i{position:absolute; top:20px; left:20px; width:60px; height:60px; line-height:58px; font-size:22px; text-align:center; border:1px solid; border-radius:50%;}
@@ -160,7 +163,7 @@ File: Layout CSS
 
 /* Footer
 --------------------------------------------------------------------------------------------------------------- */
-#footer{padding:80px 0;}
+#footer{padding:80px 0; text-align:justify}
 
 #footer .heading{margin-bottom:50px; font-size:1.2rem;font-weight:600;}
 
@@ -176,6 +179,8 @@ File: Layout CSS
 #footer input{display:block; width:100%; padding:8px;}
 #footer .grande{width:360px;height:100px;}
 #footer button{padding:8px 18px 10px; text-transform:uppercase; font-weight:700; cursor:pointer;}
+#footer iframe{width:400px;height:300px;}
+#footer h
 
 
 /* Copyright
@@ -374,14 +379,15 @@ input:focus, textarea:focus, *:required:focus{border-color:#9f603c;}
 
 
 /* Click to Action */
-#cta ul li{color:#474747; background-color:#FFFFFF;}
-#cta ul li div i{color:#4FB5F5; border-color:rgba(0,0,0,.1);}
+#cta ul li{color:#ffffff; background-color:#9f603c;}
+#cta ul li a{color:#ffffff; background-color:#9f603c;} 
+#cta ul li div i{color:#9f603c; background-color:#ffffff; border-color:rgba(0,0,0,.1);}
 
 
 /* Footer */
 #footer .heading{color:#FFFFFF;}
 #footer hr, #footer .borderedbox, #footer .linklist li{border-color:rgba(0,0,0,.1);}
-
+#footer .linklist li a{color:#FFFFFF;} 
 #footer input, #footer button{border-color:transparent;}
 #footer input{color:#FFFFFF; background-color:#FFFFFF;}
 #footer input:focus{border-color:#9f603c;}
