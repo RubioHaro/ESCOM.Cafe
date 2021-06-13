@@ -70,7 +70,9 @@ label{margin-bottom:5px;}
 
 /* Generalise
 --------------------------------------------------------------------------------------------------------------- */
-h1, h2, h3, h4, h5, h6, .heading{margin:0 0 20px 0; font-size:38px; line-height:normal; font-weight:normal;}
+h1, h4, h5, h6, .heading{margin:0 0 20px 0; font-size:38px; line-height:normal; font-weight:normal;}
+h2{margin:0 0 20px 0; font-size:24px; line-height:normal; font-weight:normal;}
+h3{margin:0 0 20px 0; font-size:18px; line-height:normal; font-weight:normal;}
 .heading.nospace{margin-bottom:0;}
 
 address{font-style:normal; font-weight:normal;}

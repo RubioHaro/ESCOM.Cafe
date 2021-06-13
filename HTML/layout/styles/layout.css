@@ -26,14 +26,12 @@ html {scroll-behavior: smooth; }
 --------------------------------------------------------------------------------------------------------------- */
 #logo img {position:absoulte; left:110px; top:200px;}
 
-/* Top Bar
+/*topBar
 --------------------------------------------------------------------------------------------------------------- */
 #topbar{padding:15px 0;font-size:.8rem; text-transform:uppercase;}
-
 #topbar ul li{display:inline-block; margin-right:10px; padding-right:15px; border-right:1px solid;}
 #topbar ul li:last-child{margin-right:0; padding-right:0; border-right:none;}
 #topbar i{line-height:normal;}
-
 
 /* Header
 --------------------------------------------------------------------------------------------------------------- */
@@ -69,7 +67,7 @@ html {scroll-behavior: smooth; }
 .container{padding:80px 0;}
 
 /* Content */
-.container .content{}
+.container .content{text-align:justify;}
 
 .sectiontitle{display:block; max-width:55%; margin:0 auto 80px; text-align:center; font-size:1.4rem ;}
 .sectiontitle *{margin:0;}
@@ -88,6 +86,8 @@ html {scroll-behavior: smooth; }
 .overview > li figure:hover a::after, .overview > li figure:hover figcaption{opacity:0; visibility:hidden;}
 .overview > li figure figcaption *{margin:0;}
 .overview > li figure .heading{margin-bottom:10px; font-size:1.2rem;}
+
+#quote{ font-family:"Gabriola"; font-size: 29px; font-style: italic; font-variant: normal; font-weight: 700; line-height: 26.4px;}
 
 /* Comments */
 #comments ul{margin:0 0 40px 0; padding:0; list-style:none;}
@@ -180,7 +180,7 @@ html {scroll-behavior: smooth; }
 #footer input{display:block; width:100%; padding:8px;}
 #footer .grande{width:360px;height:100px;}
 #footer button{padding:8px 18px 10px; text-transform:uppercase; font-weight:700; cursor:pointer;}
-#footer iframe{width:400px;height:300px;}
+#footer iframe{margin-left:20px; width:400px;height:300px;}
 
 
 /* Copyright
@@ -248,6 +248,7 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 #breadcrumb .heading{margin:0; font-size:2rem;}
 
 /* Sidebar Navigation */
+.sidebar{position:sticky;top: 0;}
 .sidebar nav{display:block; width:100%;}
 .sidebar nav li{margin:0 0 3px 0; padding:0;}
 .sidebar nav a{display:block; position:relative; margin:0; padding:5px 10px 5px 15px; text-decoration:none; border:solid; border-width:0 0 1px 0;}
@@ -333,7 +334,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#9f603c;}
 .logoname{color:#FFFFFF;}
 .logoname span{color:#FFFFFF;}
 
-
+#quote{color:#9f603c;}
 /* Rows */
 .row0, .row0 a{color:#FFFFFF; background-color:#2d1a10;}
 .row1{color:#FFFFFF; background-color:#2d1a10;}
