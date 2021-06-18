@@ -1,10 +1,10 @@
 :root {
-    --primary: #1e90ff;
-    --secondary: #EACEB9;
+    --primary: #2d1a10;
+    --secondary: white;
 }
 
 body {
-    background-color: #EACEB9 !important;
+    background-color: white !important;
 }
 
 .input-bg {
@@ -43,7 +43,7 @@ body {
 .login,
 .registration {
     color: white;
-    background-color: #524336 !important;
+    background-color: var(--primary) !important;
 }
 
 .login-link,
@@ -59,4 +59,13 @@ body {
     text-decoration: none;
     color: #EACEB9;
     font-weight: bold;
+}
+
+/* Principal */
+
+.bg-header{
+    background-image: url('/ESCOM.cafe/public/img/head.png');
+    background-position: center center;
+    /* overflow: auto; */
+    /* position: center center !important; */
 }

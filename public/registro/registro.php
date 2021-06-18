@@ -4,7 +4,7 @@
             <!-- <div class="col-2"></div> -->
             <div class="col-md-5">
                 <div class="ContenedorImagenImagotipoIndex">
-                    <a href="#">
+                    <a href="http://localhost/ESCOM.cafe/HTML/">
                         <img src="../img/logo.png" alt="ESCOM.Cafe" class="img-fluid" title="ESCOM.Cafe" />
                     </a>
                 </div>
