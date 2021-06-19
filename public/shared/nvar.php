@@ -16,10 +16,50 @@
                         <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
                     </ul>
                 </li>
+                <style>
+                    .site-block-top-search {
+                        position: relative;
+                    }
+
+                    .site-block-top-search .icon {
+                        position: absolute;
+                        left: 10px;
+                        top: 50%;
+                        -webkit-transform: translateY(-50%);
+                        -ms-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                    }
+
+                    .site-block-top-search input {
+                        padding-left: 50px;
+                        -webkit-transition: .3s all ease-in-out;
+                        -o-transition: .3s all ease-in-out;
+                        transition: .3s all ease-in-out;
+                        background-color: transparent;
+                        outline-width: 0 !important;
+                    }
+
+                    .site-block-top-search input:focus,
+                    .site-block-top-search input:active {
+                        padding-left: 35px;
+                        outline-width: 0 !important;
+                        outline: 0 none !important;
+                        -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+                        -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+                    }
+                </style>
+                <li class="nav-item">
+                    <div class="pl-5 or|r-2 order-md-1 site-search-icon text-left">
+                        <form action="./busqueda.php" class="site-block-top-search" method="GET">
+                            <!-- <span class="icon icon-search2"></span> -->
+                            <i class="icon bi bi-search align-middle"></i>
+                            <input style="text-decoration: none;" type="text" class="form-control border-0" name="texto" placeholder="Busqueda">
+                        </form>
+                    </div>
+                </li>
             </ul>
             <form class="d-flex navbar-nav">
                 <a class="nav-link active" aria-current="page" href="#!">
-                    <i class="bi-cart-fill me-1"></i>
                     Cart <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                 </a>
                 <li class="widget nav-item dropdown d-inline-block">
