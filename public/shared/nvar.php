@@ -60,7 +60,15 @@
             </ul>
             <form class="d-flex navbar-nav">
                 <a class="nav-link active" aria-current="page" href="#!">
-                    Cart <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    Cart <span class="badge bg-dark text-white ms-1 rounded-pill">
+                        <?php
+                        if (isset($_SESSION['carrito'])) {
+                            echo count($_SESSION['carrito']);
+                        } else {
+                            echo 0;
+                        }
+                        ?></span>
+                    </span>
                 </a>
                 <li class="widget nav-item dropdown d-inline-block">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
