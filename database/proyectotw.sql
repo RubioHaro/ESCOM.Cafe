@@ -62,7 +62,16 @@ CREATE TABLE `categorias` (
 
 LOCK TABLES `categorias` WRITE;
 /*!40000 ALTER TABLE `categorias` DISABLE KEYS */;
-INSERT INTO `categorias` VALUES (1,'Mujeres','Ropar para dama','women.jpg'),(2,'Hombres','Ropa para hombre','men.jpg'),(3,'Niños','Ropa para niños','children.jpg');
+INSERT INTO `categorias` VALUES (1,'Café','Variedad de Cafés','women.jpg'),
+(2,'Bebidas Calientes','Bebidas Ricas y Sanas','men.jpg'),
+(3,'Metodos Artesanales','BEBIDAS PREPARADAS CON PRECISIÓN Y CUIDADO DE NUESTROS BARISTAS','children.jpg'),
+(4,'Bebidas Frías','Para el Calor','men.jpg'),
+(5,'Postres','Ricos','men.jpg'),
+(6,'PANQUÉS/GALLETAS/SCONES','xxx','children.jpg'),
+(7,'SANDWICHES','Ricos SANDWICHES','men.jpg'),
+(8,'CAFÉ EN GRANO/PARA LA CASA','Para llevar el café','men.jpg'),
+(9,'HAMBURGUESAS','Ricas Hamburgesas','men.jpg'),
+(10,'Para Comer Aquí','Ricos','men.jpg');
 /*!40000 ALTER TABLE `categorias` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -91,7 +100,99 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (1,'Hamburgesa','Un rica anvorguesa :3',60,'hamburgesa.jpg',23,3),(2,'Taquitos','Una rica orden de taquitos',20,'taquitos.jpg',3,2),(3,'Flautas','Orden de Falutas con lechugas',20,'flautas.jpg',3,2),(4,'Club Sandwich','Sandwich con papas',20,'sandwitch.jpg',3,2),(5,'Tortas ESCOM','Torta con todo',20,'torta.jpg',3,2),(6,'Alambre ESCOM','Super alabre de bistec. Receta secreta ESCOM',20,'alambre.jpg',3,2);
+INSERT INTO `productos` VALUES (1,'Hamburgesa BBQ','Un rica hamburguesa con carne a la parrilla cubierta de salsa BBQ +Papas',80,'hamburgesa.jpg',50,9),
+(2,'Expresso','60 ml de espresso. Dulce con un acidez ligero',40,'expresso.jpg',50,1),
+(3,'Cortado','Espresso con leche texturizada 180 ml.',48,'cafe.png',50,1),
+(4,'CHIQUITITO','Leche condensada, espresso y leche texturizada 240 ml.',50,'cafe.png',50,1),
+(5,'Americano','Espresso con agua caliente 360 ml.',48,'americano.jpg',50,1),
+(6,'Cappuccino','Espresso con leche texturizada 360 ml.',55,'cappuccino.jpg',50,1),
+(7,'Latte','Espresso con leche texturizada 480 ml.',58,'latte.jpg',50,1),
+(8,'Café con Leche','Espresso con agua caliente, y leche texturizada 480 ml.',55,'cafe.png',50,1),
+(9,'Latte Vainilla','Espresso, vainilla, y leche texturizada 480 ml.',60,'latte.jpg',50,1),
+(10,'Mocha','Espresso, chocolate y leche texturizada 480 ml.',60,'cafe.png',50,1),
+(11,'Latte Caramelo','Espresso, caramelo y leche texturizada 480 ml.',60,'cafe.png',50,1),
+-- Bebidas Calientes
+(12,'Matcha Latte Puro','Matcha latte hecho con matcha puro 480 ml.',65,'cafe.png',50,2),
+(13,'Matcha Latte Dulce','Matcha latte hecho con matcha poquito endulzado 480 ml.',65,'cafe.png',50,2),
+(14,'Doradita','Bebida con mezcla de especias con base de curcuma 360 ml.',60,'cafe.png',60,2),
+(15,'Betabel Latte','Bebida con mezcla de especias con base de betabel 360 ml.',60,'cafe.png',60,2),
+(16,'Té','Escojes el tipo de té. Té Verde, de Manzanilla, de Manzana o Limón',50,'cafe.png',50,2),
+(17,'Chocolate Caliente','Chocolate estilo oaxaqueno con leche texturizada 480 ml.',60,'cafe.png',60,2),
+(18,'Chai Dulce','Base de chai poco endulzado con leche texturizada 480 ml.',65,'cafe.png',50,2),
+(19,'Chai Masala','Chai natural de especies 360 ml.',60,'cafe.png',55,2),
+(20,'Chai Espresso','Base de chai poco endulzado, leche texturizada y espresso 480 ml.',70,'cafe.png',50,2),
+(21,'Babyccino','Leche texturizada con sabor a tu elección 240 ml.',40,'cafe.png',50,2),
+-- Metodos Artesanales
+(22,'Aeropress','Café hecho en manera artesanal en el Aeropress 300 ml.',50,'artesanal.png',50,3),
+(23,'Chemex','Café hecho en manera artesanal en el Chemex 300 ml.',50,'artesanal.png',3,2),
+(24,'Prensa Francesa','Café hecho en manera artesanal en el Prensa Francesa 300 ml.',50,'artesanal.png',50,3),
+(25,'Pour Over V60','Café hecho en manera artesanal en el Hario v60 300 ml.',50,'artesanal.png',50,3),
+-- Bebidas Frías
+(26,'Cold Brew','Extracción en frío de café, el extracto mezclado con agua 480 ml.',50,'coldbrew.png',3,4),
+(27,'Botella Cold Brew','Extracto puro de café 250 ml.',150,'BotellaColdBrew.png',3,4),
+(28,'Espresso Tonic','Extracto puro de café 250 ml.',65,'coldrinks.png',3,4),
+(29,'Latte Frío en Botella','Latte frío en botella para tomar en casa con gusto 500ml.',90,'coldrinks.png',3,4),
+(30,'Chocolate Frío','Chocolate estilo oxacaqueno con leche fría 480 ml.',60,'coldchocolate.png',3,4),
+(31,'Latte Frio','Latte hecho con espresso o cold brew con leche 480 ml.',58,'coldrinks.png',3,4),
+(32,'Chai Dulce Frío','Base de Chai poco endulzado con leche fría 480 ml.',65,'coldrinks.png',3,4),
+(33,'Chai Masala Latte Frío','Chai natural de especies 480 ml.',60,'latte.png',3,2),
+(34,'Matcha Frío','Matcha latte hecho con matcha poquito endulzado 480 ml.',65,'coldrinks.png',3,4),
+(35,'Frappé Cappuccino','Base frappé café con espresso, leche y hielos 480 ml.',70,'frapucchino.png',3,4),
+(36,'Frappé Chai','Base frappé chai con leche y hielos 480 ml.',70,'coldrinks.png',3,4),
+(37,'Frappé Matcha','Base frappé matcha con leche y hielos 480 ml.',70,'coldrinks.png',3,4),
+(38,'Topo Chico','Topo Chico Mineral 355 ml',35,'coldrinks.png',3,4),
+(39,'Dominga Kombucha','Refréscate con una deliciosa Dominga de jengibre',105,'kombucha.png',3,4),
+-- POSTRES
+(40,'Pudín de Chía','Pudin de chía con leche de coco, toque de miel y frutos rojos',60,'ychia.png',3,5),
+(41,'Yoghurt Orgánico con Granola','Yoghurt orgánico, frutos rojos y granola de la casa.',55,'granola.png',3,5),
+(42,'Arroz con 3 Leches','Delicioso arroz con 3 Leches',55,'postres.png',3,5),
+(43,'Gelatina de Queso','Gelatina de Queso con Nuez',50,'queso.png',3,5),
+(44,'Pay de Limón con Merengue','Pay de limón con merengue.',55,'postres.png',3,5),
+(45,'Gajos de Toronja','Gajos de Toronja',45,'postres.png',3,5),
+-- Panques
+(46,'Panqué de Plátano Rebanada','Panqué de Plátano Rebanada',45,'postres.png',3,6),
+(47,'Panqué de Matcha Rebanada','Panqué de Matcha Rebanada',55,'postres.png',3,6),
+(48,'Panqué de Nata Rebanada','Panqué de Nata Rebanada',45,'postres.png',3,6),
+(49,'Panqué de yoghurt, limón y cardamomo rebanada.','Panqué de yoghurt, limón y cardamomo rebanada.',45,'postres.png',3,6),
+(50,'Panqué de Plátano Completa','Panqué de Plátano Completa - pedir con un día de anticipación',270,'postres.png',3,6),
+(51,'Panqué de Matcha Completa','Panqué de Matcha Completa - pedir con un día de anticipación',300,'postres.png',3,6),
+(52,'Panqué de Nata Completa','Panqué de Nata Completa - pedir con un día de anticipación',270,'postres.png',3,6),
+(53,'Panqué de yoghurt, limón y cardamomo completa.','Panqué de yoghurt, limón y cardamomo completa - pedir con un día de anticipación',270,'postres.png',3,6),
+(54,'Galleta Chispas de Chocolate','Galleta chispas de chocolate.',30,'postres.png',3,6),
+(55,'Galleta de Avena','Nutritiva Galleta de avena',25,'postres.png',3,6),
+(56,'Galleta de Dulce de Leche','Galleta de dulce de Leche.',30,'postres.png',3,6),
+(57,'Galleta de Nutella','Galleta de Nutella',30,'postres.png',3,6),
+(58,'Galletas de Nuez','Galleta de Nuez',40,'postres.png',3,6),
+(59,'Scones','Ricos Bollos con Mermelada',45,'scones.png',3,6),
+-- SANDWICHES
+(60,'Club Sandwich','Sandwich de jamón y queso amarillo acompañado con papas',120,'clubsandwich.jpg',50,7),
+(61,'Pan de Granos Aguacate','Pan de granos, aguacate, arúgula, queso feta, chile seco, aceite de oliva, y sal de mar.',120,'GranosAguacate.jpg',50,7),
+(62,'Pan de Granos Hummus','Pan de granos, hummus, arúgula, aceite de oliva, jitomate y sal de mar.',105,'sandwitch.jpg',50,7),
+(63,'Croissant con Jamón de Pavo','Rico Croissant Caliente con Jamón de Pavo y queso amarillo',75,'Croissant.png',50,7),
+(64,'Pan Blanco','Pan blanco con jamón de pavo, panela, tomate, lechuga y mayonesa chipotle.',110,'Sandwiches.png',50,7),
+(65,'Bagel de Salmón','Bagel, salmón, alcaparras y queso crema.',115,'Bagel.png',50,7),
+(66,'Ciabatta Queso de Cabra','Ciabatta con queso de cabra, pepino y tapenade.',95,'Sandwiches.png',50,7),
+(67,'Baguette Tomates Rojos','Baguette con tomates rojos, mozzarella fresco y pesto de la casa.',100,'Baguette.png',50,7),
+(68,'Baguette de Jamón Serrano','Baguette con jamón serrano, queso brie, mostaza dijon, aguacate, lechuga y aceite oliva.',125,'Baguette.png',50,7),
+-- CAFE en GRANO
+(69,'Espresso Boca Del Monte - Café en Grano','Este es el café que usamos para nuestro espresso. viene del boca del monte, veracruz, es dulce, con una
+acidez presente, con notas de chocolate, almendra, y miel, es muy versátil, lo puedes usar para todos los
+métodos de preparación de café.',150,'bocamonte.png',50,8),
+(70,'Café con Jiribilla Veracruz','Del productor Marco Córdoba tenemos un café de un micro lote de la Finca Corahe, en Zentla, Veracruz, es
+café natural, secado en camas, de la variedad sarchimor, notas de sabor: caramelo, fresa y chocolate. Café
+con Jiribilla es el proyecto de Carlos de la Torre.',195,'jiribilla.png',50,8),
+(71,'Café con Jiribilla Oaxaca','Del productor Salvador Moreno tenemos un café de la Finca el Zacatal, en Santa Cruz Acatepec, Oaxaca, es
+una mezcla de los variedades typica y bourbon, con un proceso lavado, que típicamente deja una taza muy
+fresca y limpia en la boca, notas de sabor: toronja deshidratada, flor de naranja y ciruel',195,'jiribilla.png',50,8),
+(72,'Café Finca Las Nieves','Este café es un bourbon natural, con notas de sabor: Cacao obscuro, cereza, fresa',175,'grano.png',50,8),
+(73,'Granola de la Casa','Una bolsa de 250 gramos de nuestra granola hecha en casa',100,'grano.png',50,8),
+(74,'Mama Pacha Chocolate en Barra','Mamá Pacha chocolate artesanal, Ingredientes: 75% cacao nativo, azúcar de coco 70 gramos',125,'mamapacha.png',50,8),
+(75,'Tote Bag Chiquitito','Chiquito cafe especial',250,'grano.png',50,8),
+-- Para comer aqui
+(101,'Taquitos','Una rica orden de taquitos',20,'taquitos.jpg',3,10),
+(102,'Flautas','Orden de Falutas con lechugas',20,'flautas.jpg',3,10),
+(104,'Tortas ESCOM','Torta con todo',20,'torta.jpg',3,10),
+(105,'Alambre ESCOM','Super alabre de bistec. Receta secreta ESCOM',20,'alambre.jpg',3,10);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
