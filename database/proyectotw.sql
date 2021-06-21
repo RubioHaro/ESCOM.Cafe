@@ -165,9 +165,9 @@ INSERT INTO `productos` VALUES (1,'Hamburgesa BBQ','Un rica hamburguesa con carn
 (58,'Galletas de Nuez','Galleta de Nuez',40,'postres.png',3,6),
 (59,'Scones','Ricos Bollos con Mermelada',45,'scones.png',3,6),
 -- SANDWICHES
-(60,'Club Sandwich','Sandwich de jamón y queso amarillo acompañado con papas',120,'clubsandwich.jpg',50,7),
-(61,'Pan de Granos Aguacate','Pan de granos, aguacate, arúgula, queso feta, chile seco, aceite de oliva, y sal de mar.',120,'GranosAguacate.jpg',50,7),
-(62,'Pan de Granos Hummus','Pan de granos, hummus, arúgula, aceite de oliva, jitomate y sal de mar.',105,'sandwitch.jpg',50,7),
+(60,'Club Sandwich','Sandwich de jamón y queso amarillo acompañado con papas',120,'clubsandwich.png',50,7),
+(61,'Pan de Granos Aguacate','Pan de granos, aguacate, arúgula, queso feta, chile seco, aceite de oliva, y sal de mar.',120,'GranosAguacate.png',50,7),
+(62,'Pan de Granos Hummus','Pan de granos, hummus, arúgula, aceite de oliva, jitomate y sal de mar.',105,'Sandwiches.png',50,7),
 (63,'Croissant con Jamón de Pavo','Rico Croissant Caliente con Jamón de Pavo y queso amarillo',75,'Croissant.png',50,7),
 (64,'Pan Blanco','Pan blanco con jamón de pavo, panela, tomate, lechuga y mayonesa chipotle.',110,'Sandwiches.png',50,7),
 (65,'Bagel de Salmón','Bagel, salmón, alcaparras y queso crema.',115,'Bagel.png',50,7),
