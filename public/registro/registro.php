@@ -38,7 +38,7 @@
                     </div>
 
                     <div class="col-12">
-                        No tienes Cuenta?
+                        Ya tienes Cuenta?
                         <a class="registration-link" href="./../login/">Ir a Login</a>
                     </div>
                 </form>
