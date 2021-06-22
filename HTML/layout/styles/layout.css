@@ -212,6 +212,10 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 #mainav, #breadcrumb, .sidebar nav{line-height:normal;}
 #mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"Font Awesome\ 5 Free"; font-weight:900; font-size:10px; line-height:10px;}
 
+#mainav li {
+ display: inline-block;
+ text-align:center; 
+}
 /* Top Navigation */
 #mainav{position:relative; margin-bottom:-30px; padding:0; z-index:999;}
 #mainav ul{display:inline-block;text-transform:uppercase;}
@@ -236,6 +240,15 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 #mainav form select, #mainav form select option{display:block; cursor:pointer; outline:none;}
 #mainav form select{width:100%; padding:5px; border:none;}
 #mainav form select option{margin:5px; padding:0; border:none;}
+
+#mainav li:before, #mainav li:after
+{position:absolute; opacity:0; width:0%; height:3px; content: ''; background:#2d1a10; transition:all 0.3s;}
+#mainav li:before
+{left:0px;top:0px;}
+#mainav li:after
+{right:0px; bottom:-3px;}
+#mainav li:hover:before, #mainav li:hover:after
+{opacity:1; width: 100%;}
 
 /* Breadcrumb */
 #breadcrumb{padding:150px 0 30px;}
