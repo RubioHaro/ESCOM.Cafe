@@ -1,14 +1,19 @@
 <?php
   session_start();
   include '../php/conexion.php';
+  include '../php/userClass.php';
   if(!isset($_SESSION['carrito'])){
     header("Location: ./index.php");
   }
+  if(!isset($_COOKIE['userEmail'])){
+    header("Location: ./login.php");
+  }
+  $User = new User;
   $arreglo=$_SESSION['carrito'];
   $total=0;
-  $idUser=1; //Sustituir aquÃ­ el id de la variable de SESSION
+  $idUser= $User->getUserId(); //Sustituir aquÃ­ el id de la variable de SESSION
   $comprobarinventario=0;
-  
+
   for($i=0;$i<count($arreglo);$i++){
     $total=$total+($arreglo[$i]['Precio']*$arreglo[$i]['Cantidad']);
     $resultado=$conexion->query("select inventario from productos where id=".$arreglo[$i]['Id']."")or die($conexion->error);
@@ -32,7 +37,7 @@
       $fecha=date('Y-m-d h:m:s');
       $conexion->query("insert into ventas(id_usuario,total,fecha) values($idUser,$total,'$fecha')")or die($conexion->error);
       $id_venta=$conexion->insert_id;
-      
+
       for($i=0;$i<count($arreglo);$i++){
         $conexion->query("insert into productos_venta (id_venta,id_producto,cantidad,precio,subtotal)
             values(
@@ -42,7 +47,7 @@
               ".$arreglo[$i]['Precio'].",
               ".$arreglo[$i]['Cantidad']*$arreglo[$i]['Precio']."
               )")or die($conexion->error);
-          
+
             $conexion->query("update productos set inventario=inventario -".$arreglo[$i]['Cantidad']." where id=".$arreglo[$i]['Id']."")or die($conexion->error);
       }
       $conexion->query("update saldo_electronico set saldo=$saldoNuevo where id_usuario=$idUser")or die($conexion->error);
