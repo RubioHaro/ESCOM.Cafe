@@ -1,8 +1,9 @@
 <?php
 session_start();
+include "./validateAdmin.php";
 include "../php/conexion.php";
-$resultado=$conexion->query("select productos.*,categorias.nombre as catego from 
-    productos 
+$resultado=$conexion->query("select productos.*,categorias.nombre as catego from
+    productos
     inner join categorias on productos.id_categoria=categorias.id
     order by id DESC");
 ?>
@@ -103,7 +104,7 @@ $resultado=$conexion->query("select productos.*,categorias.nombre as catego from
             </thead>
             <tbody>
                 <?php
-                while($f=mysqli_fetch_array($resultado)){ 
+                while($f=mysqli_fetch_array($resultado)){
                 ?>
                 <tr>
                     <td><?php echo $f['id'];?></td>
@@ -116,12 +117,12 @@ $resultado=$conexion->query("select productos.*,categorias.nombre as catego from
                     <td><?php echo $f['catego'];?></td>
                     <td>$<?php echo number_format($f['precio'],2,'.','');?></td>
                     <td>
-                        <button class="btn btn-danger btn-small btnEliminar" 
+                        <button class="btn btn-danger btn-small btnEliminar"
                         data-id="<?php echo $f['id'];?>"
                         data-toggle="modal" data-target="#modalEliminar">
                             <i class="fa fa-trash"></i>
                         </button>
-                        <button class="btn btn-warning btn-small btnEditar" 
+                        <button class="btn btn-warning btn-small btnEditar"
                         data-id="<?php echo $f['id'];?>"
                         data-nombre="<?php echo $f['nombre'];?>"
                         data-descripcion="<?php echo $f['descripcion'];?>"
@@ -132,10 +133,10 @@ $resultado=$conexion->query("select productos.*,categorias.nombre as catego from
                             <i class="fa fa-pencil-alt"></i>
                         </button>
                     </td>
-                </tr> 
+                </tr>
                 <?php
                 }
-                ?>           
+                ?>
             </tbody>
         </table>
       </div><!-- /.container-fluid -->

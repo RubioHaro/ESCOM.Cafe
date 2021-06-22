@@ -85,6 +85,14 @@
           </li>
 
           <li class="nav-item">
+            <a href="./solicitudesSaldo.php" class="nav-link">
+              <p>
+                Solicitudes de saldo
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
             <a href="./usuarios.php" class="nav-link">
               <i class="nav-icon fa fa-users"></i>
               <p>

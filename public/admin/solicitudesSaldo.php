@@ -8,8 +8,7 @@ include "./validateAdmin.php";
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Dashboard</title>
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -34,26 +33,64 @@ include "./validateAdmin.php";
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
+
+
+
   <!-- Preloader -->
  <!--<div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="./dashboard/dist/img//AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
   </div>-->
 
 <?php include "./layouts/header.php";?>
+<div class="content-wrapper">
+  <div class="content">
+<table>
+<thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Correo</th>
+    <th>Saldo solicitado</th>
+    <th>Acciones</th>
+  </tr>
+</thead>
+<tbody>
+<?php
+$server = "localhost";
+$db = "proyectotw";
+$user = "root";
+$password = "";
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
+$conn =  mysqli_connect($server,$user,$password,$db);
 
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+$query = "SELECT peticiones_saldo.id, usuario.nombre, usuario.email, peticiones_saldo.saldo_req  FROM peticiones_saldo INNER JOIN usuario ON peticiones_saldo.id_usuario = usuario.id WHERE peticiones_saldo.estado = '0'";
+$result = mysqli_query($conn, $query);
 
-    <!-- AQUI INICIAS -->
-    <a href="../dailyReport.php">Obtener reporte diario</a>
-  </div>
+if (!$result)
+{
+  header("Location: index.php");
+}
+
+while($row = mysqli_fetch_array($result)){
+?>
+<tr>
+  <td> <?= $row['nombre'] ?> </td>
+  <td> <?= $row['email'] ?> </td>
+  <td> <?= $row['saldo_req'] ?> </td>
+  <td>
+    <a href="acceptBalanceReq.php?id=<?= $row['id'] ?>">
+      Aceptar
+    </a>
+    <a href="deleteBalanceReq.php?id=<?= $row['id'] ?>">
+      Borrar
+    </a>
+  </td>
+</tr>
+
+<?php } ?>
+</tbody>
+</table>
+</div>
+</div>
 <?php include "./layouts/footer.php";?>
   <!-- /.control-sidebar -->
 </div>
