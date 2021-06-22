@@ -14,7 +14,7 @@
     ?>
 
     <?php
-    header("Location: public/login");
+    header("Location: HTML");
     exit();
     ?>
 <!--Mensaje-->
