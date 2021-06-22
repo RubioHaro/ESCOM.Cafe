@@ -44,7 +44,7 @@
                         <!--ABRIMOS PHP-->
                         <?php
                         include('./../php/conexion.php');
-                        $limite = 10;
+                        $limite = 9;
                         $totalQuery = $conexion->query('select count(*) from productos') or die($conexion->error);
                         $totalProductos = mysqli_fetch_row($totalQuery);
                         $totalBotones = ceil($totalProductos[0] / $limite);
