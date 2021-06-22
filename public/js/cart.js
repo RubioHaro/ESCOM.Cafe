@@ -7,7 +7,7 @@ $(document).ready(function(){
         var boton=$(this);
         $.ajax({
             method:'POST',
-            url:'./php/eliminarCarrito.php',
+            url:'./../php/eliminarCarrito.php',
             data:{
                 id:id
             }
@@ -43,7 +43,7 @@ $(document).ready(function(){
         $(".cant"+id).text("$"+mult); 
         $.ajax({
             method:'POST',
-            url:'./php/actualizar.php',
+            url:'./../php/actualizar.php',
             data:{
                 id:id,
                 cantidad:cantidad
