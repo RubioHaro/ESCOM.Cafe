@@ -241,14 +241,10 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 #mainav form select{width:100%; padding:5px; border:none;}
 #mainav form select option{margin:5px; padding:0; border:none;}
 
-#mainav li:before, #mainav li:after
-{position:absolute; opacity:0; width:0%; height:3px; content: ''; background:#2d1a10; transition:all 0.3s;}
-#mainav li:before
-{left:0px;top:0px;}
-#mainav li:after
-{right:0px; bottom:-3px;}
-#mainav li:hover:before, #mainav li:hover:after
-{opacity:1; width: 100%;}
+#mainav li:before, #mainav li:after{position:absolute; opacity:0; width:0%; height:3px; content: ''; background:#2d1a10; transition:all 0.3s;}
+#mainav li:before{left:0px;top:0px;}
+#mainav li:after{right:0px; bottom:-3px;}
+#mainav li:hover:before, #mainav li:hover:after{opacity:1; width: 100%;}
 
 /* Breadcrumb */
 #breadcrumb{padding:150px 0 30px;}
